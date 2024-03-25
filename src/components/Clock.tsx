@@ -107,18 +107,14 @@ const Clock = (props: {
               cx={128}
               cy={128}
               strokeWidth={5}
-              style={
-                !props.running && time > 0
-                  ? { transitionDuration: "350ms" }
-                  : {}
-              }
+              style={!props.running && time > 0 ? { transitionDuration: "350ms" } : {}}
             />
           </svg>
         </div>
-        {props.clockimage === "MOW2018" && (
-          <div className="absolute w-full h-full flex justify-center items-center">
+        {props.clockimage === "Poznańska Liga Debat" && (
+          <div className="absolute w-full h-full flex justify-center items-center invert">
             <Image
-              src={"/displayimages/Musketeer.png"}
+              src={"/displayimages/Poznańska Liga Debat.png"}
               alt="Musketeers of Words logo"
               width={80}
               height={64}
@@ -126,10 +122,21 @@ const Clock = (props: {
             />
           </div>
         )}
-        {props.clockimage === "MOW2024" && (
+        {props.clockimage === "Musketeers of Words 2018" && (
           <div className="absolute w-full h-full flex justify-center items-center">
             <Image
-              src={"/displayimages/MOW.png"}
+              src={"/displayimages/Musketeers of Words - Musketeer.png"}
+              alt="Musketeers of Words logo"
+              width={80}
+              height={64}
+              className="pt-32"
+            />
+          </div>
+        )}
+        {props.clockimage === "Musketeers of Words 2024" && (
+          <div className="absolute w-full h-full flex justify-center items-center">
+            <Image
+              src={"/displayimages/Musketeers of Words - Spade.png"}
               alt="Musketeers of Words logo"
               width={60}
               height={60}
